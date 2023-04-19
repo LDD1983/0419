@@ -1,0 +1,135 @@
+*{
+    box-sizing: border-box;
+    font-family: "標楷體";
+}
+
+body{
+    /* 在body 設flex    */
+    display: flex;
+    width: 1024px;
+    height: 768px;
+    padding: 0 12px;
+    margin: auto;
+    /* margin-top: 10px; */
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+    
+}
+/* top */
+.top{
+    flex-basis: 1000px;
+    height: 65px;
+    border: 1px solid grey;
+}
+
+/* aside */
+.aside{
+    flex-basis: 215px;
+    height: calc(768px - 65px - 20px);
+    /* border: 1px solid black; */
+
+    display: flex;
+    flex-direction: column;
+}
+.aside>.menu{
+    /* height: calc(100% - 25px ); */
+    flex-basis: calc(100% - 25px );
+    border: 1px solid grey;
+
+    }
+    .menu > a{
+        /* block 可以調整width height */
+        /* display : inline-block */
+        display: block;
+        background-image: url(../img/menu1.png);
+
+
+        /* 背景圖片不重複 */
+        /* background-repeat: no-repeat; */
+        width: 200px;
+        height: 35px;
+        margin: 10px auto;
+        font-size: 16px;
+        color: #000000;
+        text-decoration: none;
+         padding-top: 8px;
+        
+
+    }
+    .menu > .menu-gtc{
+        text-decoration: underline;
+        color: #0000FF;
+    }
+    .menu > a:hover{
+        background-image: url(../img/menu2.png);
+    }
+
+    .menu > .menu-h{
+        font-weight: 500;
+        font-size: 24px;
+        text-decoration: underline;
+        color: #FF00FF;
+        margin: 20px auto;
+    }
+    
+
+.aside>.update{
+    /* height: 25px; */
+    flex-basis: 25px;
+    border: 1px solid grey;
+    font-size: 16px;
+    color: #000000;
+}
+
+/* section */
+.section{
+    flex-basis: calc(100% - 215px);
+    /* border: 1px solid black; */
+
+    display: flex;
+    flex-direction: column;
+}
+.section>.marquee{
+    /* height: 29px; */
+    flex-basis: 29px;
+    border: 1px solid grey;
+    font-size: 24px;
+    color: #0000FF;
+    
+    padding-top: 5px;
+}
+.section>.content{
+    /* height: calc(100% - 29px); */
+    flex-basis: calc(100% - 29px);
+    border: 1px solid grey;
+
+
+    
+
+}
+.content > iframe{
+    width: 100%;
+    height: 100%;
+     
+
+}
+
+
+.con-text{
+    font-size: 24px;
+    color: #0000FF;
+    font-style: italic;
+    margin: 0%;
+    width:80% ;
+}
+/* footer */
+.footer{
+    flex-basis: 1000px;
+    height: 20px;
+    border: 1px solid grey;
+}
+.f-text{
+    font-size: 16px;
+}
